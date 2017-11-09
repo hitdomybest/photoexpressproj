@@ -54,6 +54,7 @@ function showPhotosList(db, res, next){
                      var index=imgPath.indexOf("\\public\\");
                      var startIndex=index+7;
                      imgPath=imgPath.substring(startIndex);
+                     console.log("index:"+index+"  start index:"+startIndex+"  image path:"+imgPath);
                      var imgFilePath=imgPath.replace(/\\/g,"/");
                      rows[i]["photo_path"]=imgFilePath;
                 }
