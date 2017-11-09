@@ -51,11 +51,13 @@ function showPhotosList(db, res, next){
 
                 for (var i in rows){
                      var imgPath=rows[i]["photo_path"];
-                     var index=imgPath.indexOf("\\public\\");
+                     //var index=imgPath.indexOf("\\public\\");
+                     var index=imgPath.indexOf("/public/");
                      var startIndex=index+7;
                      imgPath=imgPath.substring(startIndex);
                      console.log("index:"+index+"  start index:"+startIndex+"  image path:"+imgPath);
                      var imgFilePath=imgPath.replace(/\\/g,"/");
+                     console.log(imgFilePath);
                      rows[i]["photo_path"]=imgFilePath;
                 }
 
