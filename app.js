@@ -33,6 +33,10 @@ function envConfig(envLable){
     return;
 }
 
+/*
+// set NODE_ENV=production:* & node app.js //windows
+// NODE_ENV=production node app.js  //linux
+*/
 var currentEnvLable=process.env.NODE_ENV || "development";
 
 
